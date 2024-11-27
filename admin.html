@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking System</title>
+    <style>
+
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Home Page Layout */
+#home {
+    margin: 20px;
+}
+
+#aggregate, #client-table {
+    margin-bottom: 20px;
+}
+
+.table-section table, #client-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+/* Register Train Page */
+#register-train form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#register-train label, #profile label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#register-train input, #profile input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button[type="button"] {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav >
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#register-train">Register Train</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home">
+        <h1>Welcome to the Train Booking System</h1>
+
+        <!-- Aggregate Table Section -->
+        <section id="aggregate">
+            <h2>Aggregate Data</h2>
+            <div class="table-section">
+                <h3>Number of Tickets Booked per Class</h3>
+                <!-- Placeholder for aggregated ticket data -->
+                <table>
+                    <tr>
+                        <th>Class</th>
+                        <th>Tickets Booked</th>
+                    </tr>
+                    <tr>
+                        <td>Class A</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Class B</td>
+                        <td>300</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="table-section">
+                <h3>Sales Done per Quarter</h3>
+                <!-- Placeholder for sales data -->
+                <table>
+                    <tr>
+                        <th>Quarter</th>
+                        <th>Sales</th>
+                    </tr>
+                    <tr>
+                        <td>Q1</td>
+                        <td>$5000</td>
+                    </tr>
+                    <tr>
+                        <td>Q2</td>
+                        <td>$3000</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Client Table Section -->
+        <section id="client-table">
+            <h2>Client Details</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Tickets Booked</th>
+                    <th>Delete</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>123-456-7890</td>
+                    <td>2</td>
+                    <td><button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>987-654-3210</td>
+                    <td>1</td>
+                    <td><button>Delete</button></td>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <!-- Register Train Page -->
+    <section id="register-train">
+        <h2>Register a Train</h2>
+        <form>
+            <label for="train-name">Train Name:</label>
+            <input type="text" id="train-name" name="train-name" required>
+
+            <label for="seats">Number of Seats:</label>
+            <input type="number" id="seats" name="seats" required>
+
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" required>
+
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" required>
+
+            <label for="ownership">Owner Ship:</label>
+            <input type="text" id="ownership" name="ownership" required>
+
+            <button type="submit">Register Train</button>
+        </form>
+    </section>
+
+    <!-- Profile Page -->
+    <section id="profile">
+        <h2>Update Profile</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Update Profile</button>
+            <button type="button">Delete Account</button>
+        </form>
+    </section>
+
+</body>
+</html>
